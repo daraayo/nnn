@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoInvest Pro</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+</head>
+<body>
+    <div id="app">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">CryptoInvest Pro</div>
+                <button id="sidebar-toggle" class="sidebar-toggle">☰</button>
+            </div>
+            <ul>
+                <li><a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fas fa-chart-line"></i> Markets</a></li>
+                <li><a href="#"><i class="fas fa-wallet"></i> Portfolio</a></li>
+                <li><a href="#"><i class="fas fa-newspaper"></i> News</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </nav>
+        <main>
+            <header>
+                <div id="search-bar">
+                    <input type="text" placeholder="Search cryptocurrencies...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div id="user-info">
+                    <span id="notifications"><i class="fas fa-bell"></i></span>
+                    <span id="user-avatar">JD</span>
+                </div>
+            </header>
+            <div id="dashboard">
+                <section id="crypto-prices">
+                    <h2>Live Cryptocurrency Prices</h2>
+                    <div id="crypto-list"></div>
+                </section>
+                <section id="market-overview">
+                    <h2>Market Overview</h2>
+                    <div id="chart"></div>
+                </section>
+                <!--section id="news-feed">
+                    <h2>Latest News</h2>
+                    <input type="text" id="news-search" placeholder="Search news...">
+                    <select id="news-category">
+                        <option value="">All Categories</option>
+                        <option value="bitcoin">Bitcoin</option>
+                        <option value="ethereum">Ethereum</option>
+                        <option value="defi">DeFi</option>
+                    </select>
+                    <ul id="news-list"></ul>
+                </!--section>-->
+                <section id="crypto-calculator">
+                    <h2>Cryptocurrency Converter</h2>
+                    <input type="number" id="amount-input" placeholder="Amount">
+                    <select id="from-currency"></select>
+                    <select id="to-currency"></select>
+                    <button id="calculate-btn">Convert</button>
+                    <div id="result"></div>
+                </section>
+                <section id="price-alerts">
+                    <h2>Price Alerts</h2>
+                    <select id="alert-coin"></select>
+                    <input type="number" id="alert-price" placeholder="Target Price">
+                    <button id="set-alert">Set Alert</button>
+                    <button id="enable-notifications">Enable Notifications</button>
+                </section>
+            </div>
+        </main>
+        <aside id="chat-widget" class="chat-widget">
+            <div class="chat-header">
+                <h3>Live Chat</h3>
+                <button id="close-chat">×</button>
+            </div>
+            <div id="chat-messages"></div>
+            <div id="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Type your message...">
+                <button id="send-chat">Send</button>
+            </div>
+        </aside>
+    </div>
+    <button id="open-chat" class="chat-button">Chat</button>
+    <script src="new.js"></script>
+</body>
+</html>
